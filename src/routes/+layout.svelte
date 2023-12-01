@@ -1,3 +1,7 @@
+<script>
+  import { page } from "$app/stores";
+</script>
+
 <svelte:head>
   <link
     rel="stylesheet"
@@ -7,6 +11,7 @@
 </svelte:head>
 
 <h1>Welcome to Kit Routes</h1>
+<pre>{$page.url}</pre>
 
 <a href="/">Home</a> |
 <a href="/info">About</a>
