@@ -9,7 +9,7 @@
 <h1>Welcome to Kit Routes</h1>
 
 <a href="/">Home</a> |
-<a href="/about">About</a>
+<a href="/info">About</a>
 
 <hr />
 
