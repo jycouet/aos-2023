@@ -22,6 +22,7 @@ export default defineConfig({
       },
 
       LINKS: {
+        link_aos: "https://advent.sveltesociety.dev",
         link_aos_data: {
           href: `https://advent.sveltesociety.dev/data/2023/day-[day].json`,
           params: {

@@ -43,6 +43,7 @@ const ACTIONS = {
  * LINKS
  */
 const LINKS = {
+  "link_aos": `https://advent.sveltesociety.dev`,
   "link_aos_data": (params: { day: (string) }) => {
     return `https://advent.sveltesociety.dev/data/2023/day-${params.day}.json`
   }
@@ -127,6 +128,6 @@ export type KIT_ROUTES = {
   PAGES: { '/': never, '/about': never, '/aos/day-01': never, '/aos/day-01/elf-[name]': 'name', '/aos/day-02': never }
   SERVERS: { 'GET /aos/data-[day]': 'day', 'GET /aos/day-02': never }
   ACTIONS: { 'checking /aos/day-01/elf-[name]': 'name', 'check /aos/day-02': never }
-  LINKS: { 'link_aos_data': 'day' }
+  LINKS: { 'link_aos': never, 'link_aos_data': 'day' }
   Params: { take: never, name: never, day: never }
 }

@@ -8,6 +8,9 @@
 
 <ul>
   <li>
+    Rules: <a target="_blank" href={route("link_aos")}>Advent of Svelte</a>
+  </li>
+  <li>
     <div class="flex">
       <a href={route("/aos/day-01", { take })}>Day 01</a>
       <i>How many to show?</i>
