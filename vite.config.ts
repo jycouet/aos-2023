@@ -7,7 +7,7 @@ export default defineConfig({
     sveltekit(),
     kitRoutes<KIT_ROUTES>({
       logs: {
-        // stats: true,
+        stats: true,
       },
       PAGES: {
         "/aos/day-01": {

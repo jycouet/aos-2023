@@ -9,6 +9,6 @@ export const actions = {
 
     return guess === "7"
       ? `Correct number of 🍪 you found well the number 7`
-      : `${guess}! Incorrect, check out Cookies 😉`;
+      : `${guess}! Incorrect, check out console and Cookies 😉`;
   },
 } satisfies Actions;
