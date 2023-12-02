@@ -25,7 +25,8 @@ const PAGES = {
 const SERVERS = {
   "GET /aos/data-[day]": (params: { day: (string | number) }) => {
     return `/aos/data-${params.day}`
-  }
+  },
+  "GET /aos/day-02": `/aos/day-02`
 }
 
 /**
@@ -34,7 +35,8 @@ const SERVERS = {
 const ACTIONS = {
   "checking /aos/day-01/elf-[name]": (params: { name: (string | number) }) => {
     return `/aos/day-01/elf-${params.name}?/checking`
-  }
+  },
+  "check /aos/day-02": `/aos/day-02?/check`
 }
 
 /**
@@ -123,8 +125,8 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 */
 export type KIT_ROUTES = { 
   PAGES: { '/': never, '/about': never, '/aos/day-01': never, '/aos/day-01/elf-[name]': 'name', '/aos/day-02': never }
-  SERVERS: { 'GET /aos/data-[day]': 'day' }
-  ACTIONS: { 'checking /aos/day-01/elf-[name]': 'name' }
+  SERVERS: { 'GET /aos/data-[day]': 'day', 'GET /aos/day-02': never }
+  ACTIONS: { 'checking /aos/day-01/elf-[name]': 'name', 'check /aos/day-02': never }
   LINKS: { 'link_aos_data': 'day' }
   Params: { take: never, name: never, day: never }
 }
