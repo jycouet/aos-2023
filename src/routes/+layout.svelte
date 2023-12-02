@@ -1,5 +1,6 @@
 <script>
   import { page } from "$app/stores";
+  import { route } from "$lib/ROUTES";
 </script>
 
 <svelte:head>
@@ -14,7 +15,8 @@
 <pre>{$page.url}</pre>
 
 <a href="/">Home</a> |
-<a href="/info">About</a>
+<a href={route("/aos", { take: 2 })}>aos</a>|
+<a href={route("/about")}>About</a>
 
 <hr />
 
