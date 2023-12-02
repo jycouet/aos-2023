@@ -14,6 +14,10 @@
       <input type="number" bind:value={take} />
     </div>
   </li>
+
+  <li>
+    <a href={route("/aos/day-02")}>Day 02</a>
+  </li>
 </ul>
 
 <style>

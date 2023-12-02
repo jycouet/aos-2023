@@ -15,7 +15,8 @@ const PAGES = {
   },
   "/aos/day-01/elf-[name]": (params: { name: (string | number) }) => {
     return `/aos/day-01/elf-${params.name}`
-  }
+  },
+  "/aos/day-02": `/aos/day-02`
 }
 
 /**
@@ -121,7 +122,7 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 * ```
 */
 export type KIT_ROUTES = { 
-  PAGES: { '/': never, '/about': never, '/aos/day-01': never, '/aos/day-01/elf-[name]': 'name' }
+  PAGES: { '/': never, '/about': never, '/aos/day-01': never, '/aos/day-01/elf-[name]': 'name', '/aos/day-02': never }
   SERVERS: { 'GET /aos/data-[day]': 'day' }
   ACTIONS: { 'checking /aos/day-01/elf-[name]': 'name' }
   LINKS: { 'link_aos_data': 'day' }

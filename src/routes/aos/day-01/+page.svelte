@@ -8,6 +8,8 @@
   let take = $page.url.searchParams.get("take") ?? 4;
 </script>
 
+<h2>Day 01</h2>
+
 {#each data.elves.splice(0, take) as elve}
   <div>
     <a href={route("/aos/day-01/elf-[name]", { name: elve.name })}>
