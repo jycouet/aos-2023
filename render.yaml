@@ -1,7 +1,7 @@
 # all services
 services:
   - type: web
-    name: aos-2023
+    name: aos-2023-jyc
     env: node
     repo: https://github.com/jycouet/aos-2023
     region: frankfurt
