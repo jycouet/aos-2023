@@ -1,21 +1,20 @@
 <script>
-  import { page } from "$app/stores";
   import { route } from "$lib/ROUTES";
+  import santa_svelte from "$lib/assets/santa-svelte.png";
 </script>
 
 <svelte:head>
+  <link rel="icon" href={santa_svelte} />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
   />
-  <title>Demo Kit Routes</title>
+  <title>AoS</title>
 </svelte:head>
 
-<h1>Welcome to Kit Routes</h1>
-<pre>{$page.url}</pre>
+<h1>Advent of Svelte <em>- Kit Routes</em></h1>
 
-<a href="/">Home</a> |
-<a href={route("/aos", { take: 2 })}>aos</a>|
+<a href={route("/")}>Home</a> |
 <a href={route("/about")}>About</a>
 
 <hr />

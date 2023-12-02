@@ -10,11 +10,11 @@
 const PAGES = {
   "/": `/`,
   "/about": `/about`,
-  "/aos": (params: { take: (string | number) }) => {
-    return `/aos${appendSp({ take: params.take })}`
+  "/aos/day-01": (params: { take: (string | number) }) => {
+    return `/aos/day-01${appendSp({ take: params.take })}`
   },
-  "/elve-[name]": (params: { name: (string | number) }) => {
-    return `/elve-${params.name}`
+  "/aos/day-01/elf-[name]": (params: { name: (string | number) }) => {
+    return `/aos/day-01/elf-${params.name}`
   }
 }
 
@@ -22,15 +22,17 @@ const PAGES = {
  * SERVERS
  */
 const SERVERS = {
-  
+  "GET /aos/data-[day]": (params: { day: (string | number) }) => {
+    return `/aos/data-${params.day}`
+  }
 }
 
 /**
  * ACTIONS
  */
 const ACTIONS = {
-  "update /elve-[name]": (params: { name: (string | number) }) => {
-    return `/elve-${params.name}?/update`
+  "checking /aos/day-01/elf-[name]": (params: { name: (string | number) }) => {
+    return `/aos/day-01/elf-${params.name}?/checking`
   }
 }
 
@@ -38,7 +40,9 @@ const ACTIONS = {
  * LINKS
  */
 const LINKS = {
-  
+  "link_aos_data": (params: { day: (string) }) => {
+    return `https://advent.sveltesociety.dev/data/2023/day-${params.day}.json`
+  }
 }
 
 /**
@@ -117,9 +121,9 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 * ```
 */
 export type KIT_ROUTES = { 
-  PAGES: { '/': never, '/about': never, '/aos': never, '/elve-[name]': 'name' }
-  SERVERS: Record<string, never>
-  ACTIONS: { 'update /elve-[name]': 'name' }
-  LINKS: Record<string, never>
-  Params: { take: never, name: never }
+  PAGES: { '/': never, '/about': never, '/aos/day-01': never, '/aos/day-01/elf-[name]': 'name' }
+  SERVERS: { 'GET /aos/data-[day]': 'day' }
+  ACTIONS: { 'checking /aos/day-01/elf-[name]': 'name' }
+  LINKS: { 'link_aos_data': 'day' }
+  Params: { take: never, name: never, day: never }
 }

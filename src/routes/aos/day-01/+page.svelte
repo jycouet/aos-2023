@@ -10,7 +10,7 @@
 
 {#each data.elves.splice(0, take) as elve}
   <div>
-    <a href={route("/elve-[name]", { name: elve.name })}>
+    <a href={route("/aos/day-01/elf-[name]", { name: elve.name })}>
       {elve.name}
     </a>
   </div>

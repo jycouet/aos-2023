@@ -1,15 +1,25 @@
-<h2>Slides of the demo</h2>
+<script>
+  import { route } from "$lib/ROUTES";
+
+  let take = 7;
+</script>
+
+<h2>Advent of Svelte</h2>
 
 <ul>
-  <li>1️⃣ npm create <span class="wow">svelte</span>@latest demo-kit-routes</li>
-  <li>2️⃣ Added a +layout.svelte (1 reset CSS + title + menu)</li>
-  <li>3️⃣ Added an info/+page.svelte</li>
-  <li>4️⃣ pnpm add <span class="wow">vite-plugin-kit-routes</span> -D</li>
-  <li>👉 WE ARE HERE</li>
+  <li>
+    <div class="flex">
+      <a href={route("/aos/day-01", { take })}>Day 01</a>
+      <i>How many to show?</i>
+      <input type="number" bind:value={take} />
+    </div>
+  </li>
 </ul>
 
 <style>
-  .wow {
-    color: #ff3e00;
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 </style>
