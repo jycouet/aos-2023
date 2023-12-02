@@ -8,3 +8,7 @@ https://advent.sveltesociety.dev
 pnpm i
 pnpm dev
 ```
+
+## Using
+
+- [vite-plugin-kit-routes](https://www.npmjs.com/package/vite-plugin-kit-routes)

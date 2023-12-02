@@ -20,3 +20,16 @@
 <hr />
 
 <slot />
+
+<hr />
+
+<span class="right"
+  ><a href="https://github.com/jycouet/aos-2023">Github</a></span
+>
+
+<style>
+  .right {
+    /* Good old time */
+    float: right;
+  }
+</style>
