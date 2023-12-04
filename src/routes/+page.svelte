@@ -21,6 +21,10 @@
   <li>
     <a href={route("/aos/day-02")}>Day 02</a>
   </li>
+
+  <li>
+    <a href={route("/aos/day-03")}>Day 03</a>
+  </li>
 </ul>
 
 <style>
@@ -28,5 +32,9 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+
+  li {
+    margin: 1rem;
   }
 </style>
